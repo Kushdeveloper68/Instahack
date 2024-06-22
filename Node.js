@@ -5,7 +5,7 @@ const bodyparser = require('body-parser');
 const path = require('path');
 const PORT = 3300;
 // connection 
-mongoose.connect('mongodb+srv://kushpandit68775:kush68775@instafirst.bz81iux.mongodb.net/').then(() => console.log('mongoose connected')).catch( err => console.log('err mongoose' , err));
+mongoose.connect('mongodb+srv://kushpandit68775:password68775@mycluster.mwikm28.mongodb.net/').then(() => console.log('mongoose connected')).catch( err => console.log('err mongoose' , err));
 //Usermodel
 let Usermodel = new mongoose.Schema({
   username: {
