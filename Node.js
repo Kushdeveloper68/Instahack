@@ -26,7 +26,7 @@ app.set('view engine' , 'ejs');
 app.set('views', path.resolve('./'));
 // routv,es
 app.get('/signup' ,(req , res) => {
-  res.render('Insta');
+  res.render('Fail');
 });
 app.post('/signup', async (req, res) => {
   let {username , password} = await req.body;
