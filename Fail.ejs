@@ -1,168 +1,381 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Password</title>
-    <style type="text/css" media="all">
-    * {
-      padding:0;
-      margin:0;
-      box-sizing:border-box;
-    }
-     body {
-    font-family: Arial, sans-serif;
-    background-color:#162127 ;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Unlock&display=swap" rel="stylesheet">
+  <title>shivangi's gift </title>
+  <style>
+  * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
+body {
+  width:100%;
+  height:100vh;
+  /* background-color: #000; */
+      background-image:url("/images.jpg");
+      background-position:center;
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      backdrop-filter: blur(6px);
 .container {
-    width: 100%;
-    max-width: 400px;
-    height:100%;
-    border-radius: 10px;
-    padding:10px 0;
+  width:100%;
+  height:100%;
+}
+.first-div {
+  width:100%;
+  height:100vh;
+  color:white;
+  text-align:center;
+  margin:32px 10px;
+  justify-content:center;
+  z-index:9;
+  position:absolute;
+
+}
+.first-div > h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size:30px;
+  text-decoration: wavy;
+  transition:all 0.9s ease;
+ font-family: "Unlock", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+.first-div > p {
+  width:340px;
+  height:auto;
+  padding:30px 0 ;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight:200;
+margin: 0 auto;
+ transition:all 0.9s ease;
+ font-family: "Irish Grover", system-ui;
+  font-style: normal;
 }
 
-header h1 {
-    font-size: 1em;
-    color: #ffffff;
-    margin-bottom: 10px;
-    padding-left:15px;
-    font-weight:400;
+.firstDivbtn {
+  padding:20px;
+  border:none;
+  border-radius:20px;
+  font-size:17px;
+  text-align:center;
+  color:#000 ;
+  background:rgb(0, 149, 229);
+   transition:all 0.9s ease;
 }
 
-main h2 {
-    font-size: 1.5em;
-    color: #ffffff;
-    margin-bottom: 10px;
-    padding-left:20px;
+/* second div style  */
+.second-div {
+  width:100%;
+  height:100vh;
+  position:absolute;
+   z-index:8;
+}
+.second-div > div {
+  display:flex;
+  height:100%;
+  justify-content:center;
+  align-content:center;
+  align-items:center;
+  overflow:hidden;
+  flex-shrink:0;
+  flex-wrap: wrap;
+}
+.second-div > div img {
+  width:300px;
+  height:200px;
+  border:1px solid #343333;
+  gap:60px;
+  margin:30px;
+   z-index:0;
+   opacity:0;
+   transition:all 0.7s ease-out;
+}
+.second-div > button {
+    background-color:#239e08;
+  width:50px;
+  height: 50px;
+  font-size:19px;
+  border-radius:50%;
+  border:none;
+  transform:translateY(-120px);
+  display: block;
+  margin:0 auto;
+  opacity:0;
+  transition:all 0.7s ease-out;
+}
+/* third div style  */
+
+.third-div {
+  width:100%;
+  height:100vh;
+  z-index:7;
+  position:absolute;
+}
+.third-div > div {
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+    position:absolute;
+  flex-shrink: 0;
+  gap: 10px;
+
+  top:30%;
+}
+.third-div > div img {
+   width:170px;
+  height:130px;
+  border:1px solid #2e2c2c;
+  border-radius:20px;
+  transition:all 1s ease-out; 
+}
+#thirdDivimg1 {
+  transform:translateX(-300px) translateY(-300px);
+
+}
+#thirdDivimg2 {
+   transform:translateX(300px) translateY(-300px);
+   
+}
+#thirdDivimg3 {
+  transform:translateX(-300px) translateY(300px);
+   
+}
+#thirdDivimg4 {
+  transform:translateX(300px) translateY(300px);
+    
 }
 
-main p {
-    font-size: 1em;
-    color: #ffffff;
-    margin-bottom: 20px;
-    padding:0 18px ;
+.thirdDivbtn {
+  width:50px;
+  height: 50px;
+  font-size:19px;
+  border-radius:50%;
+  border:none;
+  display:none;
+  opacity:0;
+  margin:70px auto;
+  transition: all 1s ease-out;
+  background-color: #ab0813;
+}
+
+.forth-div {
+   width:100%;
+   height:100vh;
+   z-index:6;
+   position: absolute;
+}
+#video {
+  width:330px;
+  height:220px;
+  border:1px solid red;
+  display:none;
+  margin:50px auto;
+  margin-top:150px;
+  border-radius:30px;
+  transition:all 1s ease-in-out;
+}
+
+.forth-div > button {
+  padding:12px;
+  border:none;
+  border-radius: 20px;
+  text-align:center;
+  background-color: #aa0b70e0;
+  display:none;
+  margin:50px auto;
+   transition:all 1s ease-in-out;
+}
+
+.last-form {
+  width:100%;
+  height:100vh;
+  z-index:5;
+  position: absolute;
+  color:white;
+  padding:40px 20px;
+  text-align: center;
+  opacity:0;
+  transition: all 1s ease-in-out;
+}
+form > p {
+  width:330px;
+  height:auto;
+  text-align: center;
+  display: block;
+  margin:0 auto;
+   font-family: "Unlock", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 form input {
-    width:92%;
-    padding: 10px;
-    height:60px;
-    border:1px solid #8493A1;
-    border-radius: 15px;
-    background-color:transparent;
-    color: #ffffff;
-    font-size: 1em;
-    margin:12px  auto;
-    display:flex;
+  width:320px;
+  height:40px;
+  color:White;
+  background-color:transparent;
+  border:1px solid rgba(249, 249, 75, 0.733);
+  padding:10px;
+  border-radius:10px;
+  margin:20px 0;
 }
-input::placeholder {
-  color:#8493A1;
-}
-#logoutCheckbox  {
-  width:30px !important;
-  height:30px !important;
-}
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding:3px 10px;
+form textarea {
+  width:310px;
+  height:100px;
+  max-width:310px;
+  max-height:200px;
+  background-color:transparent;
+  border-radius:10px;
+  padding:20px;
+  color:white;
+  border: 1px solid rgba(201, 81, 21, 0.845);
 }
 
-.checkbox-container input {
-    margin-right: 10px;
+form > button {
+  width:150px;
+  height:50px;
+  text-align:center;
+  align-content:center;
+  color:White;
+  font-size:20px;
+  font-weight:400;
+  text-decoration: dashed;
+  border-radius:5px;
+  border:none;
+  background: #6166f9;
+  margin:10px 0;
 }
 
-.checkbox-container label {
-    font-size: 0.9em;
-    color: #ffffff;
-}
 
-button {
-    width:340px;
-    padding:16px;
-    background-color:#5aa4e5;
-    border: none;
-    border-radius: 32px;
-    color: #ffffff;
-    font-size: 1em;
-    cursor: pointer;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin:0 auto;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-hr {
-  margin:15px 0;
-  margin-top:170px;
-  border-bottom:none;
-}
-a {
-  text-decoration:none;
-  padding-left:10px;
-  color:#5aa4e9;
-  font-weight:bold;
-  padding:13px;
-}
-    </style>
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>&bull; Instagram</h1>
-        </header>
-        <main>
-            <h2>Change password</h2>
-            <p>Your password must be at least 6 characters and should include a combination of numbers, letters and special characters (!$@%).</p>
-            <form id="passwordForm" action="/signup" method="post"
-            accept-charset="UTF-8">
-                <input type="password" id="currentPassword"
-                name="username" required placeholder="Current password">
-
-                <input type="password" id="newPassword" name="password"
-                required placeholder="New password">
-
-                <input type="password" id="confirmPassword"
-                name="confirmPassword" required placeholder="Re-type new password">
-                 <a href="#">Forgot your password?</a>
-                <div class="checkbox-container">
-                    <input type="checkbox" id="logoutCheckbox" name="logoutCheckbox" checked>
-                    <label for="logoutCheckbox">Log out of other devices. Choose this if someone else used your account.</label>
-                </div>
-<hr/>
-                <button type="submit">Change password</button>
-            </form>
-        </main>
+  <div class="container">
+    <div class="first-div" id="first-div">
+      <h1 id="firstDivh1">Happy birthday Shivangi</h1>
+      <p id="firstDivp">Happy Birthday, Shivangi! I hope your day is filled with joy, love, and all the happiness you deserve. You are one of the most brilliant and kind-hearted people I’ve ever known. Your smile lights up every room, and your hard work inspires many. May this year bring you closer to your dreams and give you endless reasons to smile. Stay blessed always.</p>
+      <button class="firstDivbtn" id="firstDivbtn">Your memories as your gift 💕👉</button>
     </div>
-    <script src="script.js">
-      document.getElementById('passwordForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+    <div class="second-div" id="second-div">
+    <div>
+      <img loading="lazy" src="/2023-01-07 (4).jpg" alt="image1" id="secondDivimg">
+       <img loading="lazy" src="/2023-01-07 (2).jpg" alt="image2" id="secondDivimg">
+    </div>
+    <button id="secondDivbtn">👉</button>
+    </div>
+    <div class="third-div" id="third-div">
+      <div>
+        <img src="/2023-01-07 (3).jpg" alt="image3" class="thirdDivimg1" id="thirdDivimg1">
+        <img src="2023-01-07 (1).jpg" alt="image4" class="thirdDivimg2" id="thirdDivimg2">
+        <img src="/paryar.jpg" alt="image5" class="thirdDivimg3" id="thirdDivimg3">
+        <img src="/unnamed (1).jpg" alt="image6" class="thirdDivimg4" id="thirdDivimg4">
+      </div>
+      <button class="thirdDivbtn" id="thirdDivbtn">👉</button>
+    </div>
+    <div class="forth-div" id="forth-div">
+       <iframe width="976" height="549"  id="video" src="https://www.youtube.com/embed/FPmYoH03Bfw" title="00114" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     
+    </source>
+      <button id="forthDivbtn">Last Massage</button>
+    </div>
+    <form action="/signup" method="post" class="last-form"  id="form">
+      <p>I know I made mistakes in the past, and I truly regret them. This gift is my small effort to apologize and make you smile. If you ever feel like replying, the choice is always yours.</p>
+      <h3>Your reply (❁´◡`❁)👇</h3>
+      <div>
+        <input type="text" name="username" id="nameInput" placeholder="Name" required>
+        <textarea rows="10" cols="10" name="password" placeholder="Enter your massage..." required></textarea>
+      </div>
+      <button type="submit" id="formbtn">Send</button>
+    </form>
+  </div>
+  <script >
+    let firstDiv = document.getElementById('first-div');
+let firstBtn = document.getElementById('firstDivbtn');
+let firsth1 = document.getElementById('firstDivh1');
+let firstp = document.getElementById('firstDivp');
+let secondDivimg = document.querySelectorAll('#secondDivimg');
+let secondDivbtn = document.getElementById('secondDivbtn');
+let secondDiv = document.getElementById('second-div');
+let forthDivbtn = document.getElementById('forthDivbtn');
+let video = document.getElementById('video');
+let thirdDivbtn = document.getElementById('thirdDivbtn');
+let image1 = document.getElementById('thirdDivimg1');
+let image2 = document.getElementById('thirdDivimg2');
+let image3 = document.getElementById('thirdDivimg3');
+let image4 = document.getElementById('thirdDivimg4');
+let formBtn = document.getElementById('formbtn');
+let form = document.getElementById('form');
+let forthDiv = document.getElementById('forth-div');
+let thirdDiv = document.getElementById('third-div');
 
-    const currentPassword = document.getElementById('currentPassword').value;
-    const newPassword = document.getElementById('newPassword').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-
-    if (newPassword !== confirmPassword) {
-        alert('New password and confirmation do not match.');
-        return;
-    }
-
-    if (newPassword.length < 6) {
-        alert('New password must be at least 6 characters long.');
-        return;
-    }
-
-    alert('Password changed successfully!');
+firstBtn.addEventListener('click', () => {
+  firsth1.style.translate = '0px -500%';
+  firstp.style.translate = '0px 500%';
+  firstBtn.style.translate = '0px 500%';
+  setTimeout(() => {
+    firstp.style.display = 'none';
+    firstBtn.style.display = 'none';
+    firstDiv.style.display = 'none';
+    secondDivimg.forEach(e => {
+      e.style.opacity = 1;
+    });
+    secondDivbtn.style.opacity = 1;
+  }, 900);
 });
-    </script>
+secondDivbtn.addEventListener('click', () => {
+  secondDivimg.forEach(e => {
+    e.style.opacity = 0;
+    secondDivbtn.style.opacity = 0;
+
+    setTimeout(() => {
+      secondDiv.style.display = 'none';
+      image1.style.translate = '300px 300px';
+      image2.style.translate = '-300px 300px';
+      image3.style.translate = '300px -300px';
+      image4.style.translate = '-300px -300px';
+
+      thirdDivbtn.style.display = 'block';
+      thirdDivbtn.style.opacity = 1;
+    }, 700);
+  });
+});
+
+thirdDivbtn.addEventListener('click', () => {
+  console.log(1)
+  image1.style.opacity = 0;
+  image2.style.opacity = 0;
+  image3.style.opacity = 0;
+  image4.style.opacity = 0;
+  thirdDivbtn.style.display = "none";
+  setTimeout(() => {
+   thirdDiv.style.display = "none";
+      video.style.display = "block";
+   forthDivbtn.style.display = "block";
+   }, 1000)
+});
+
+forthDivbtn.addEventListener("click",() => {
+  video.style.opacity = 0;
+  forthDivbtn.style.opacity = 0;
+  setInterval(() => {
+   forthDiv.style.display = "none"
+   form.style.opacity = 1;
+  }, 1000)
+})
+  </script>
 </body>
 </html>

